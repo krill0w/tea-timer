@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "KiwiFruit";
+    src: url("Kiwi\ Fruit.otf") format("otf");
+}
+
+:root {
+    --pistachio: #bcd274ff;
+    --jordy-blue: #95b4eeff;
+    --hookers-green: #437566ff;
+    --beaver: #a18276ff;
+    --eggplant: #453643ff;
+}
+
+body {
+    background-color: var(--pistachio);
+    font: KiwiFruit;
+}
