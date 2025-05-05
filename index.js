@@ -5,29 +5,29 @@ const fs = require("fs");
 let win;
 
 function createWindow() {
-    win = new BrowserWindow({
-        width: 550,
-        height: 600,
-        webPreferences: (
-            nodeIntegration: false,
-            contextIsolation: true,
-            preload: path.join(__dirname, "preload.js"),
-        ),
-    });
+  win = new BrowserWindow({
+    width: 550,
+    height: 600,
+    webPreferences: {
+      nodeIntegration: false,
+      contextIsolation: true,
+      preload: path.join(__dirname, "preload.js"),
+    },
+  });
 
-    win.removeMenu();
-    win.loadFile("index.html");
-
-    ipcMain.on("load-page", (event, page) => {
-        win.loadFile(page);
-    });   
-};
+  win.removeMenu();
+  win.loadFile("index.html");
+  
+  ipcMain.on("load-page", (event, page) => {
+    win.loadFile(page);
+  });
+}
 
 app.whenReady().then(() => {
-    createWindow();
-    app.on("activate", () => {
-        if (BrowserWindow.getAllWindows().length === 0) {
-            createWindow();
-        }
-    });
+  createWindow();
+  app.on("activate", () => {
+    if (BrowserWindow.getAllWindows().length === 0) {
+      createWindow();
+    }
+  });
 });
