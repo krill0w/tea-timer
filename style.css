@@ -13,5 +13,8 @@
 
 body {
     background-color: var(--pistachio);
-    font: KiwiFruit;
+}
+
+h1 {
+    font-family: KiwiFruit, sans-serif;
 }
