@@ -1,6 +1,6 @@
 @font-face {
-    font-family: "KiwiFruit";
-    src: url("KiwiFruit.woff2") type("woff2");
+    font-family: "Penpoint";
+    src: url("Penpoint.woff2") format("woff2");
 }
 
 :root {
@@ -12,9 +12,51 @@
 }
 
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: "Penpoint";
     background-color: var(--pistachio);
 }
 
-h1 {
-    font-family: KiwiFruit, sans-serif;
+.container {
+    text-align: center;
+}
+
+.button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: none;
+    font-size: 16px;
+    font-family: "Penpoint";
+    color: white;
+    cursor: pointer;
+    margin: 20px;
+    transition: background-color 0.3s;
+}
+
+.button1 {
+    background-color: #4CAF50;
+    /* Green */
+}
+
+.button1:hover {
+    background-color: #45a049;
+}
+
+.button2 {
+    background-color: #f44336;
+    /* Red */
+}
+
+.button2:hover {
+    background-color: #e53935;
+}
+
+#timer {
+    font-size: 24px;
+    margin-top: 20px;
 }
