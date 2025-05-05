@@ -1,6 +1,6 @@
 @font-face {
     font-family: "KiwiFruit";
-    src: url("Kiwi\ Fruit.otf") format("otf");
+    src: url("KiwiFruit.woff2") type("woff2");
 }
 
 :root {
